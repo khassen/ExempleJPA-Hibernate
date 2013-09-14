@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+	<persistence-unit name="basesamplejpa">
+	
+		<properties>
+<!-- 		configuration de bd -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/basesamplejpa"/>
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.jdbc.password" value="root"/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+<!-- 			le dialect c la langue qui va parler jpa -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+<!-- 			permet à hibernate charger toute les classes auto -->
+			<property name="hibernate.archive.autodetection" value="class, hbm"/>
+			<!-- create / create-drop / update / validate -->
+			<property name="hibernate.hbm2ddl.auto" value="update"/>
+<!-- 			afficher les requetes sql -->
+			<property name="hibernate.show_sql" value="true"/>
+			<property name="hibernate.generate_statistics" value="true"/> 
+			
+		</properties>
+	</persistence-unit>
+</persistence>
